@@ -1,77 +1,70 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800');
-
-/* BLUE COLOR - 2f429a */
-*,
-body,
-html {
-  padding: 0;
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 2px;
-  font-weight: 200;
-  overflow-x: hidden;
-  box-sizing: border-box;
+*{
+    margin: 0px;
 }
 
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
+.left-pane{
+    padding: 40px;
+    background: #2f429a;
+    color: white; 
+    height: 100vh;
 }
 
-.left {
-  left: 0;
-  padding: 40px;
-  background: #2f429a;
-  color: white;
+.right-pane{
+    height: 100vh;
 }
 
-/* Control the right side */
-.right {
-  right: 0;
-  background-color: white;
-  /* padding-bottom: 3rem; */
-
+.button{
+    font-weight: 700;
+    color: white;
 }
 
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: auto;
-  width: auto;
-  padding-bottom: 2rem;
-  transform: translate(-50%, -50%);
-  text-align: center;
+
+
+.date{
+    font-weight: 400;
+    margin-top: -14px;
+    color: yellow;
 }
 
-.name {
-  text-align: left;
-  color: #2f429a;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: -10px;
+ #triangle-right{
+     z-index: 999;
+     position: absolute;
+     top: 50%;
+     left: 49%;
+     transform: translate(-50%,-50%);
+     width: 0;
+     height: 0;
+     border-top: 70px solid transparent;
+     border-left: 70px solid #2f429a;
+     border-bottom: 70px solid transparent;
+ }
+
+  .all-posts{
+     text-decoration: none;
+     font-weight: 800;
+     color: yellow;
+ }
+
+ .social{
+    margin-bottom: 0px;
+    position: absolute;
+    padding: 0 25px 10px;
+    font-size: 1.2rem;
+    top: 95%;
+    left: 40%;
 }
 
-.description {
-  font-size: 1rem;
-  text-align: left;
-  opacity: 0.9;
+.social-links{
+    padding-right: 3px;
+    font-size: 19px;
+    margin: 3px;
 }
 
-.description span {
-  color: #2f429a;
-}
 
 .contact{
-    position: absolute;
-    bottom: 0;
     padding: 5px;
     width: 100%;
-    text-align: center;
-    font-size: 0.8rem;
+    font-size: 1.4rem;
 }
 
 .contact span{
@@ -79,65 +72,41 @@ html {
     border-bottom: 3px solid #2f429a;
 }
 
-.blog-heading{
+.centered{
+    margin-top: 50%;
+}
+
+.contact-div{
+    margin-top: 55%;
+}
+
+.name {
+    text-align: left;
+    color: #2f429a;
+    font-size: 2.1rem;
     font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 40px;
+  //   margin-bottom: -8px;
+  }
+  
+  .description {
+    font-size: 1.7rem;
+    text-align: left;
+    opacity: 0.9;
+  }
+  
+  .description span {
+    color: #2f429a;
+  }
+
+
+@media screen and (max-width: 1000px){
+    .social{
+        left: 38%;
+    }
 }
 
-.date{
-    font-weight: 400;
-    margin-bottom: -6px;
-}
-
-.blog-title{
-    margin-bottom: -10px;
-    font-weight: 700;
-}
-
-.button{
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-}
-
-.social{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 0 25px 10px;
-    font-size: 1.2rem;
-}
-
-.social-links{
-    margin: 5px;
-}
-
-
- #triangle-right{
-     z-index: 999;
-     position: absolute;
-     top: 50%;
-     left: 51%;
-     transform: translate(-50%,-50%);
-     width: 0;
-     height: 0;
-     border-top: 50px solid transparent;
-     border-left: 50px solid #2f429a;
-     border-bottom: 50px solid transparent;
- }
-
- .all-posts{
-     text-decoration: none;
-     font-weight: 800;
-     color: yellow;
- }
-
-.all-posts{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 0 25px 10px;
-    margin: 5px;
-    font-size: 0.8rem;
+@media screen and (max-width: 768px){
+    .left-pane{
+        min-width: 100%;
+    }
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import {Link} from 'gatsby'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -17,38 +17,43 @@ class LeftPane extends Component {
     }
 
     componentDidMount(){
-        // use the node ref to create the animation
         this.myTween = TweenLite.from(this.blogText, 1, {y: 100});
     }
 
     render() {
         const {edges} = this.props
         const latestPost = edges[0].node.frontmatter
-        console.log(edges)
 
         return (
-        
-    <div className="split left">
+     <Fragment>
+    <div className="container">
         <div ref={div => this.blogText = div}>
-            <h3 className="blog-heading">latest post</h3>
+            <h3 className="blog-heading">latest</h3>
             <div className="blog-post">
-                <p className="date">{latestPost.date}</p>
                 <h3 className="blog-title">{latestPost.title}</h3>
+                <p className="date">{latestPost.date}</p>
                 <p className="blog-description">{latestPost.excerpt}</p>
                 <Link to={latestPost.path} className="button">
                     READ
                 </Link>
-       
             </div>
-
-        </div>
-        <Link to="/all-posts" state={{edges}} className="all-posts">VIEW ALL POSTS</Link>
-
-        <div className="social">
-                <FontAwesomeIcon icon={['fab','github']} className="social-links"/>
-                <FontAwesomeIcon icon={['fab','linkedin-in']} className="social-links"/>
+            <br/>
+            <div>
+                <Link to="/all-posts" state={{edges}} className="all-posts">view all posts</Link>
+            </div>
         </div>
     </div>
+      
+    <div className="social">
+              <FontAwesomeIcon icon={['fab','github']} className="social-links"/>
+              <FontAwesomeIcon icon={['fab','linkedin-in']} className="social-links"/>
+    </div>
+    
+    </Fragment>
+
+
+
+
     
         );
     }

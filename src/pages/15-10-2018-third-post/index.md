@@ -3,7 +3,7 @@ path: "/third-post"
 date: "15-10-2018"
 title: "Third test post"
 tags: ['this','that']
-excerpt: "A preview of my third post omegaLUL! Does this extend beyond measure?"
+excerpt: "Avengers: Endgame is going to break the film universe, and here's why."
 ---
 
 

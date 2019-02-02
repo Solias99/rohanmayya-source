@@ -4,11 +4,11 @@ import { graphql, Link } from 'gatsby'
 import LeftPane from '../components/LeftPane'
 import RightPane from '../components/RightPane'
 
+import './../styles/skeleton/css/skeleton.css'
 import './../styles/home.scss'
 
 
 const Layout = ({data}) => {
-    // console.log(edges)
     const { edges } = data.allMarkdownRemark
     return(
        <div>
@@ -23,8 +23,16 @@ const Layout = ({data}) => {
                 )
            })} */}
     <div id="triangle-right"></div>
-    <LeftPane edges={edges} />
-    <RightPane />
+
+    <div class="row">
+           <div class="six columns left-pane">
+                <LeftPane edges={edges} />
+           </div>
+           <div class="six columns right-pane">
+                <RightPane />
+           </div>
+    </div>
+    
         
 
 
