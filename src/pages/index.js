@@ -4,7 +4,6 @@ import { graphql, Link } from 'gatsby'
 import LeftPane from '../components/LeftPane'
 import RightPane from '../components/RightPane'
 
-import './../styles/skeleton/css/skeleton.css'
 import './../styles/home.scss'
 
 
@@ -12,31 +11,20 @@ const Layout = ({data}) => {
     const { edges } = data.allMarkdownRemark
     return(
        <div>
-           {/* {edges.map(edge => {
-                const {frontmatter} = edge.node
-                return (
-                    <div key={frontmatter.path}>
-                        <Link to={frontmatter.path}>
-                        {frontmatter.title}
-                        </Link>
-                    </div>
-                )
-           })} */}
-    <div id="triangle-right"></div>
+        <div id="triangle-right"></div>
+            <div className="row">
 
-    <div class="row">
-           <div class="six columns left-pane">
-                <LeftPane edges={edges} />
-           </div>
-           <div class="six columns right-pane">
-                <RightPane />
-           </div>
-    </div>
-    
-        
+            <div className="grid">
+                <div className="left-pane">
+                    <LeftPane edges={edges} />
+                </div>
 
+                <div className="right-pane">
+                    <RightPane />
+                </div>
+            </div>
 
-
+            </div>
        </div>
     )
 }

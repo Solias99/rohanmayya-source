@@ -1,9 +1,9 @@
 ---
 path: "/third-post"
-date: "15-10-2018"
-title: "Third test post"
+date: "29-12-2018"
+title: "My website's architecture."
 tags: ['this','that']
-excerpt: "Avengers: Endgame is going to break the film universe, and here's why."
+excerpt: "Take a look at the internal workings of my site, and why I chose this particular framework (GatsbyJS) to flesh it out."
 ---
 
 

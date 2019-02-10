@@ -25,34 +25,38 @@ class LeftPane extends Component {
         const latestPost = edges[0].node.frontmatter
 
         return (
-     <Fragment>
-    <div className="container">
-        <div ref={div => this.blogText = div}>
-            <h3 className="blog-heading">latest</h3>
-            <div className="blog-post">
-                <h3 className="blog-title">{latestPost.title}</h3>
-                <p className="date">{latestPost.date}</p>
-                <p className="blog-description">{latestPost.excerpt}</p>
-                <Link to={latestPost.path} className="button">
-                    READ
-                </Link>
-            </div>
-            <br/>
-            <div>
-                <Link to="/all-posts" state={{edges}} className="all-posts">view all posts</Link>
+
+        <Fragment>
+            
+        <div className="container">
+            <div ref={div => this.blogText = div}>
+            {/* <h3 className="blog-heading">latest</h3> */}
+                <div className="blog-post">
+                    <h3 className="blog-title">{latestPost.title}</h3>
+                    <p className="date">{latestPost.date}</p>
+                    <p className="blog-description">{latestPost.excerpt}</p>
+                    {/* <Link to={latestPost.path} className="button">
+                        READ
+                    </Link> */}
+     
+                  
+                </div>
+
+                <hr/>
+                
+                <br/>
+                <br/>
+                    <Link to="/all-posts" state={{edges}} className="all-posts">view all posts</Link>
+
             </div>
         </div>
-    </div>
-      
-    <div className="social">
-              <FontAwesomeIcon icon={['fab','github']} className="social-links"/>
-              <FontAwesomeIcon icon={['fab','linkedin-in']} className="social-links"/>
-    </div>
-    
-    </Fragment>
-
-
-
+        
+        <div className="social">
+                <FontAwesomeIcon icon={['fab','github']} className="social-links"/>
+                <FontAwesomeIcon icon={['fab','linkedin-in']} className="social-links"/>
+        </div>
+        
+        </Fragment>
 
     
         );
