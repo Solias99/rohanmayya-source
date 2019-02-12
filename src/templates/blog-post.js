@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import {Link, graphql} from 'gatsby'
 
 
@@ -9,27 +9,38 @@ const Template = ({data, pageContext}) => {
     const {next,prev} = pageContext
     const {markdownRemark} = data
     const title = markdownRemark.frontmatter.title
+    const date = markdownRemark.frontmatter.date
     const html = markdownRemark.html
 
     return (
-        <div className="container">
-            <h1>{title}</h1>
-            <div className="blogpost"
+        <Fragment>
+            <div className="blog-post-heading">
+                <h1 className="blog-post-title">{title}</h1>
+                <h3 className="blog-post-date">{date}</h3>
+            </div>
+        
+
+        <div className="blog-post-container">
+            <div className="blog-post-text"
                 dangerouslySetInnerHTML={{__html: html}} 
             />
             
-            {next &&
-                <Link to={next.frontmatter.path}>
-                    Next
-                </Link>
-            }
+        </div>
 
+        <div className="blog-post-links">
             {prev &&
-                <Link to={prev.frontmatter.path}>
+                <Link to={prev.frontmatter.path} className="blog-post-prev-link">
                     Previous
                 </Link>
             }
+            {next &&
+                <Link to={next.frontmatter.path} className="blog-post-next-link">
+                    Next
+                </Link>
+            }
         </div>
+
+        </Fragment>
     )
 }
 
@@ -40,6 +51,7 @@ query($pathSlug: String!) {
         html
         frontmatter{
             title
+            date
         }
     }
 }
