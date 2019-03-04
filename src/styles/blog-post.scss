@@ -5,8 +5,7 @@
     margin: 0 auto;
     text-align: left;
     padding: 30px 0 0 0;
-    font-size: 40px;
-
+    font-size: 3rem;
 }
 
 .blog-post-date{
@@ -50,9 +49,28 @@
     font-size: 0.8rem;
 }
 
+
+.blog-post-text h3{
+    font-size: 0.9rem;
+    font-weight: bolder;
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+.blog-post-text p, .blog-post-text li{
+    line-height: 31px;
+    font-size: 0.77rem;
+    font-weight: lighter;
+}
+
+.blog-post-text a{
+    color: #2f429a;
+}
+
+
 @media screen and (max-width: 768px){
     .blog-post-title{
-        font-size: 1rem;
+        font-size: 1.4rem;
         width: 92%;
     }
     
@@ -71,4 +89,9 @@
     .blog-post-links{
         width: 92%;
     }
+
+    .blog-post-text p, .blog-post-text li{
+        line-height: 25px;
+    }
 }
+

@@ -5,9 +5,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faGithub, faKey } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { TweenLite } from 'gsap'
 
-library.add(fab)
+library.add(fab, faArrowLeft)
 
 
 class LeftPane extends Component {
@@ -40,7 +41,7 @@ class LeftPane extends Component {
                 </Link>
 
 
-                <hr/>
+                
                 
                 <br/>
                 <br/>

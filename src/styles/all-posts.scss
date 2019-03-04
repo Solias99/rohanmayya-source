@@ -1,25 +1,75 @@
-body{
-    margin-top: 100px;
-}
+// body{
+//     margin-top: 100px;
+// }
 
-.single-post{
-    text-align: center;
-    padding: 20px;
-    color: #313131;
-}
+// .single-post{
+//     text-align: center;
+//     padding: 20px;
+//     color: #313131;
+// }
 
-.single-post li{
-    list-style: none;
-    padding: 10px;
+// .single-post li{
+//     list-style: none;
+//     padding: 10px;
    
+// }
+
+// .single-post-title{
+//     font-weight: 800;
+// }
+
+// .single-post-link{
+//     text-decoration: none;
+//     color: #2f429a;
+//     font-weight: 800;
+// }
+
+.back-icon{
+    padding: 20px;
 }
 
-.single-post-title{
-    font-weight: 800;
+
+.all-posts-container{
+    padding: 30px;
 }
 
-.single-post-link{
+.all-posts-links{
     text-decoration: none;
-    color: #2f429a;
-    font-weight: 800;
+}
+
+.card {
+    margin-bottom: 30px;
+    border-bottom: 1px solid black;
+}
+
+
+.all-posts-title, .all-posts-excerpt, .all-posts-date {
+    color: black;
+}
+
+.all-posts-title{
+    font-size: 1.1rem;
+    font-family: 'Montserrat', serif;
+    color: hsla(0,0%,0%,0.9);
+    font-weight: 900;
+}
+
+.all-posts-excerpt{
+    font-weight: lighter;
+    margin-top: 3px;
+    font-size: 0.9rem;
+}
+
+.all-posts-date{
+    padding: 2px;
+    color: grey;
+    font-size: 0.7rem;
+}
+
+@media screen and (min-width: 768px){
+    .card{
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
 }

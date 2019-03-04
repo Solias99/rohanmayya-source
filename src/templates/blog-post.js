@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import {Link, graphql} from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 import '../styles/blog-post.scss'
@@ -14,6 +15,9 @@ const Template = ({data, pageContext}) => {
 
     return (
         <Fragment>
+            <div className="back-link">
+                <Link to="/"><FontAwesomeIcon icon={'arrow-left'} className="back-icon"/></Link>
+            </div>
             <div className="blog-post-heading">
                 <h1 className="blog-post-title">{title}</h1>
                 <h3 className="blog-post-date">{date}</h3>
