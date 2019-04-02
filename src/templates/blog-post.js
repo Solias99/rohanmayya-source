@@ -1,9 +1,11 @@
 import React, { Fragment } from "react"
 import {Link, graphql} from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { DiscussionEmbed } from "disqus-react";
 
 
 import '../styles/blog-post.scss'
+import Bio from '../components/Bio'
 
 const Template = ({data, pageContext}) => {
     console.log(pageContext)
@@ -12,11 +14,16 @@ const Template = ({data, pageContext}) => {
     const title = markdownRemark.frontmatter.title
     const date = markdownRemark.frontmatter.date
     const html = markdownRemark.html
+    const disqusShortname = "www-rohanmayya-com";
+    const disqusConfig = {
+      identifier: date,
+      title: title,
+    };
 
     return (
         <Fragment>
             <div className="back-link">
-                <Link to="/"><FontAwesomeIcon icon={'arrow-left'} className="back-icon"/></Link>
+                <Link to="/"><FontAwesomeIcon icon={'home'} className="back-icon"/></Link>
             </div>
             <div className="blog-post-heading">
                 <h1 className="blog-post-title">{title}</h1>
@@ -28,9 +35,7 @@ const Template = ({data, pageContext}) => {
             <div className="blog-post-text"
                 dangerouslySetInnerHTML={{__html: html}} 
             />
-            
-        </div>
-
+        <Bio /> 
         <div className="blog-post-links">
             {prev &&
                 <Link to={prev.frontmatter.path} className="blog-post-prev-link">
@@ -42,7 +47,14 @@ const Template = ({data, pageContext}) => {
                     Next
                 </Link>
             }
+
         </div>
+
+        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+
+        </div>
+
+        
 
         </Fragment>
     )

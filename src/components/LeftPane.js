@@ -5,10 +5,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faGithub, faKey } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faHome } from '@fortawesome/free-solid-svg-icons'
 import { TweenLite } from 'gsap'
 
-library.add(fab, faArrowLeft)
+library.add(fab, faArrowLeft, faHome)
 
 
 class LeftPane extends Component {
@@ -51,8 +51,8 @@ class LeftPane extends Component {
         </div>
         
         <div className="social">
-                <FontAwesomeIcon icon={['fab','github']} className="social-links"/>
-                <FontAwesomeIcon icon={['fab','linkedin-in']} className="social-links"/>
+                <a href="https://github.com/Solias99" style={{color: 'white'}}><FontAwesomeIcon icon={['fab','github']} className="social-links"/></a>
+                {/* <Link to=""><FontAwesomeIcon icon={['fab','linkedin-in']} className="social-links"/></Link> */}
         </div>
         
         </Fragment>
