@@ -3,12 +3,13 @@ import {Link, graphql} from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { DiscussionEmbed } from "disqus-react";
 
+import '../styles/github-markdown.scss';
+import '../styles/markdown-styles.scss'
 
 import '../styles/blog-post.scss'
 import Bio from '../components/Bio'
 
 const Template = ({data, pageContext}) => {
-    console.log(pageContext)
     const {next,prev} = pageContext
     const {markdownRemark} = data
     const title = markdownRemark.frontmatter.title
@@ -20,31 +21,34 @@ const Template = ({data, pageContext}) => {
       title: title,
     };
 
+    
     return (
         <Fragment>
-            <div className="back-link">
+            {/* <div className="back-link">
                 <Link to="/"><FontAwesomeIcon icon={'home'} className="back-icon"/></Link>
-            </div>
+            </div> */}
+            
+        
+
+        <div className="blog-post-container">
             <div className="blog-post-heading">
                 <h1 className="blog-post-title">{title}</h1>
                 <h3 className="blog-post-date">{date}</h3>
             </div>
-        
 
-        <div className="blog-post-container">
-            <div className="blog-post-text"
+            <div className="markdown-body"
                 dangerouslySetInnerHTML={{__html: html}} 
             />
         <Bio /> 
         <div className="blog-post-links">
             {prev &&
                 <Link to={prev.frontmatter.path} className="blog-post-prev-link">
-                    Previous
+                    Previous Post
                 </Link>
             }
             {next &&
                 <Link to={next.frontmatter.path} className="blog-post-next-link">
-                    Next
+                    Next Post
                 </Link>
             }
 

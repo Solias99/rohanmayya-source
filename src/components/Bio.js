@@ -36,7 +36,7 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p style={{fontStyle: 'italic', fontSize: 13, fontWeight: 'lighter'}}>
+            <p style={{fontStyle: 'italic', fontSize: 14 }}>
               Hi there! I'm Rohan, your friendly neighbourhood fullstack developer. Follow me on <a href="https://github.com/Solias99" className="github-black-link">Github!</a>
             </p>
           </div>
