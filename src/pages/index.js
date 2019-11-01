@@ -1,16 +1,21 @@
 import React from "react"
 import { graphql } from 'gatsby'
+import { Helmet } from "react-helmet"
 
 import LeftPane from '../components/LeftPane'
 import RightPane from '../components/RightPane'
 
 import './../styles/home.scss'
 
-
 const Layout = ({data}) => {
     const { edges } = data.allMarkdownRemark
     return(
        <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Rohan Mayya</title>
+          <link rel="canonical" href="http://rohanmayya.com" />
+        </Helmet>
         <div id="triangle-right"></div>
             <div className="row">
 

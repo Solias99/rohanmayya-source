@@ -37,7 +37,7 @@ function Bio() {
               }}
             />
             <p style={{fontStyle: 'italic', fontSize: 14 }}>
-              Hi there! I'm Rohan, your friendly neighbourhood fullstack developer. Follow me on <a href="https://github.com/Solias99" className="github-black-link">Github!</a>
+              Hi there! I'm Rohan, your friendly neighbourhood fullstack developer. Find me on <a href="https://github.com/Solias99" className="github-black-link">Github!</a>
             </p>
           </div>
         )

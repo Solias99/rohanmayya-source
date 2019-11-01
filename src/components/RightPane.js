@@ -20,7 +20,7 @@ class RightPane extends Component {
                 {/* <div className="centered"> */}
                     <div ref={div => this.myDetails = div} className="centered">
                          <p className="name">Hi, I'm Rohan Mayya.</p>
-                         <p className="description">CS student and fullstack developer. Check out my <Link to="/portfolio" className="portfolio-link">portfolio</Link></p>
+                         <p className="description">CS student and fullstack developer. I like writing about software engineering and development.</p>
                     </div>
             
                     <p className="contact">Want to work with me? Drop me a message at <span>rohan.mayya@gmail.com</span></p>

@@ -1,6 +1,6 @@
 ---
 path: "/css-layouts"
-date: "11-04-2019"
+date: "05-03-2019"
 title: "Common CSS layouts using flex, grid and position properties."
 tags: ['tech','coding']
 excerpt: "Get started quickly with the most common use cases of these 3 properties."

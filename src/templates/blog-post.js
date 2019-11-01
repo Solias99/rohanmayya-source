@@ -2,6 +2,7 @@ import React, { Fragment } from "react"
 import {Link, graphql} from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { DiscussionEmbed } from "disqus-react";
+import { Helmet } from "react-helmet"
 
 import '../styles/github-markdown.scss';
 import '../styles/markdown-styles.scss'
@@ -28,7 +29,11 @@ const Template = ({data, pageContext}) => {
                 <Link to="/"><FontAwesomeIcon icon={'home'} className="back-icon"/></Link>
             </div> */}
             
-        
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>{title}</title>
+          <link rel="canonical" href="http://rohanmayya.com" />
+        </Helmet>
 
         <div className="blog-post-container">
             <div className="blog-post-heading">

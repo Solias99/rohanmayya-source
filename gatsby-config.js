@@ -4,6 +4,7 @@ module.exports = {
         description: 'My portfolio website.'
     },
     plugins:[
+        `gatsby-plugin-react-helmet`,
         `gatsby-transformer-remark`,
         `gatsby-plugin-sass`,
         `gatsby-transformer-sharp`,
